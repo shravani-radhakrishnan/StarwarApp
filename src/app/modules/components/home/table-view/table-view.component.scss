@@ -1,0 +1,14 @@
+.table-responsive {
+  max-height: calc(100vh - 185px);
+  .table {
+    margin-bottom: 0px !important;
+    thead {
+    }
+    tbody {
+      tr > td > span {
+        font-size: 12px;
+        text-transform: capitalize;
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+.header {
+  .navbar {
+    .logo {
+      font-weight: 700;
+      color: orange;
+      font-size: 15px;
+    }
+    .myProfile-text {
+      color: var(--light-orange);
+      font-weight: 500;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+      margin-right: 3rem;
+    }
+  }
+  .sideNavArrow {
+    cursor: pointer;
+    width: 41px;
+    height: 38px;
+    background-color: var(--light-orange);
+    content: "";
+    position: fixed;
+    top: 5rem;
+    z-index: 10;
+    margin: 0 auto;
+    border-radius: 25px 0px 0px 25px;
+
+    > i {
+      padding-top: 9px;
+      padding-left: 19px;
+      text-align: center;
+      font-size: 22px;
+      color: white;
+    }
+  }
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1030;
+    top: 0;
+    right: 0;
+    background-color: var(--light-orange);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: #fff;
+    .myProfile {
+      margin-left: 1.3rem;
+      margin-right: 1.3rem;
+      margin-top: 0.5rem;
+      text-align: center;
+
+      &:hover {
+        background-color: var(--light-gold);
+        border-radius: 11px;
+        > .navBtns {
+          background-color: var(--light-gold);
+          text-transform: capitalize;
+          outline: none !important;
+        }
+      }
+      .navBtns {
+        color: #fff;
+        background: var(--light-orange);
+        border-width: 0px;
+        border-style: none;
+        cursor: pointer;
+        padding-top: 5px;
+        font-size: 14px;
+        font-weight: 400;
+        outline: none !important;
+        text-transform: capitalize;
+      }
+      hr {
+        margin-left: 0.7rem;
+        margin-right: 0.7rem;
+        margin-top: 0.2rem !important;
+        margin-bottom: 0.2rem !important;
+        border-top: 1px solid var(--light-gold) !important;
+      }
+    }
+  }
+}
+.dataContainer {
+  padding: 7rem 1rem 1rem 1rem;
+  .tableHeading {
+    padding: 1rem 0rem 1rem 0rem;
+    background-color: var(--light-orange);
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    .row{
+      .header{
+        text-transform: capitalize;
+      }
+      .view{
+        span{
+          padding:0rem 1rem 0rem 1rem ;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .header {
+    .sidenav {
+      padding-top: 15px;
+
+      a {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.mySidenavtrue {
+  right: 198px;
+  top: 5rem;
+  transition-duration: 0.5s;
+}
+
+.mySidenav {
+  top: 5rem;
+  right: 5px;
+  transition-duration: 0.5s;
+}

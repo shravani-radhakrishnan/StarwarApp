@@ -1,0 +1,21 @@
+:root {
+  //Start New Color code
+  --salmon-pink: #fc6f7f;
+  --coral-pink: #ff595e;
+  --slate-grey: #68686f;
+  --greyish-50: #80b8b8b8;
+  --white: #ffffff;
+  --dodger-blue: #3185fc;
+  --light-royal-blue: #3d51ff;
+  --aqua-blue: #98c1d9;
+  --dark-black: #262730;
+  --cod-black: #1b1b1b;
+  --shk-black: #202023;
+  --light-gold: #ffd046;
+  --light-orange: #ffa500;
+}
+
+//we are using below color class for globally direct in html
+.coral-pink-clr {
+  color: var(--coral-pink);
+}
