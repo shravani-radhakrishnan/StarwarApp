@@ -42,9 +42,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  // toggle side bar
   openNav() {
     this.sideNavbar = !this.sideNavbar;
   }
+  // based on the user selection assign data
   getLink(data) {
     console.log(data);
     this.selectedName = data.name;
@@ -63,12 +65,15 @@ export class HomeComponent implements OnInit {
     this.storageService.setItem("selectedInfo", data);
     this.dataService.dataPass$.next(data);
   }
+
+  // to switch between table or chart view
   viewChange(data) {
     if (data) {
       this.selectedView = data;
     }
   }
 
+  // to filter the text
   filterText(e) {
     let filterData = e.target.value;
     console.log(filterData);

@@ -33,12 +33,13 @@ export class TableViewComponent implements OnInit {
     private dataService: DataPassService,
     private storageService: StorageService
   ) {
-    console.log("call me");
+    // subscribe the filter text
     this.dataService.searchDataPass$.subscribe((data) => {
       if (data) {
         this.searchText = data;
       }
     });
+    // subscribe the type of user selection
     this.dataService.dataPass$.subscribe((data) => {
       if (data) {
         this.selectedInfo = data;
@@ -50,11 +51,11 @@ export class TableViewComponent implements OnInit {
         this.setData(this.selectedInfo);
       }
     });
-    // this.selectedInfo = this.storageService.getItem('selectedInfo');
   }
 
   ngOnInit(): void {}
 
+  // based on the selction assign tables and data
   setData(selectedInfo) {
     if (selectedInfo.name === "characters") {
       this.displayList = STARWAR_CHARACTERS.dataView.rows;

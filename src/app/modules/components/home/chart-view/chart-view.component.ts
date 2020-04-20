@@ -17,7 +17,7 @@ import { NO_CHARACTERS_IN_FILM } from "src/app/core/constants/app.constant";
 export class ChartViewComponent implements OnInit {
   chartInfo = NO_CHARACTERS_IN_FILM;
   charactersArray;
-  // Pie
+  // Pie chart options
   public pieChartOptions: ChartOptions = {
     responsive: true,
   };
@@ -34,6 +34,8 @@ export class ChartViewComponent implements OnInit {
 
   }
   ngOnInit(): void {}
+
+  // common fun for converting the obj data to array
   getData(val) {
     let data = [];
     this.chartInfo.forEach((element) => {
