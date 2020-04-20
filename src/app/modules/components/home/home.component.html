@@ -21,18 +21,24 @@
 <div class="dataContainer" *ngIf="this.selectedList">
   <div class="col-12 tableHeading">
     <div class="row">
-      <div class="col-6 header">
-        {{selectedName}}
+      <div class="col-xs-12 col-md-4 col-lg-4 header">
+        {{selectedName}} Info
       </div>
-      <div class="col-6 view">
+      <div class="col-xs-12 col-md-4 col-lg-4 view">
         View
         <span><i class="fa fa-table" aria-hidden="true" (click)="viewChange('table')"></i></span>
         <span><i class="fa fa-pie-chart" aria-hidden="true" (click)="viewChange('chart')"></i></span>
+      </div>
+      <div class="col-xs-12 col-md-4 col-lg-4 search">
+        <input type="text" (input)="filterText($event)" placeholder="search..">
       </div>
     </div>
   </div>
 <app-table-view *ngIf="selectedView ==='table'"></app-table-view>
 
 <app-chart-view *ngIf="selectedView ==='chart'"></app-chart-view>
+</div>
+<div class="back-img" *ngIf="!this.selectedList">
+  <img src="../../../../assets/images/Capture.PNG" alt="Nature" class="img-responsive">
 </div>
 

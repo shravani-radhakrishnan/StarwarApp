@@ -3,6 +3,10 @@
   .table {
     margin-bottom: 0px !important;
     thead {
+      tr > th {
+        text-transform: capitalize;
+        color: var(--light-orange);
+      }
     }
     tbody {
       tr > td > span {

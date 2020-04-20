@@ -3,7 +3,7 @@ import { ActivatedRoute } from "@angular/router";
 import {
   SIDE_BAR,
   STARWAR_CHARACTERS,
-  FILIMS,
+  FILMS,
   PLANETS,
   SPECIES,
   STARSHIPS,
@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
   @ViewChild("myProfileText") myProfileText: ElementRef;
   @ViewChild("showProfile") showProfile: ElementRef;
   showMyContainer = false;
+  searchText;
   sideNavbar = false;
   sideBarList = SIDE_BAR;
   selectedList: any;
@@ -45,8 +46,8 @@ export class HomeComponent implements OnInit {
     this.openNav();
     if (data.name === "characters") {
       this.selectedList = STARWAR_CHARACTERS;
-    } else if (data.name === "filims") {
-      this.selectedList = FILIMS;
+    } else if (data.name === "films") {
+      this.selectedList = FILMS;
     } else if (data.name === "planets") {
       this.selectedList = PLANETS;
     } else if (data.name === "species") {
@@ -61,5 +62,11 @@ export class HomeComponent implements OnInit {
     if(data){
       this.selectedView = data;
     }
+  }
+
+  filterText(e){
+    let filterData = e.target.value;
+    console.log(filterData);
+    this.dataService.searchDataPass$.next(filterData);
   }
 }

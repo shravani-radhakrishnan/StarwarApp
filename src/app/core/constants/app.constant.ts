@@ -1311,7 +1311,7 @@ export const STARWAR_CHARACTERS = {
     ]
   }
 }
-export const FILIMS = {
+export const FILMS = {
   "dataView": {
     "totalRows": "7",
     "rowsReturned": 7,
@@ -3497,7 +3497,7 @@ export const STARSHIPS = {
 }
 export const SIDE_BAR =[
   {'name':'characters','logo':'fa fa-user'},
-  {'name':'filims','logo':'fa fa-film'},
+  {'name':'films','logo':'fa fa-film'},
   {'name':'planets','logo':'fa fa-globe'},
   {'name':'species','logo':'fa fa-users'},
   {'name':'starships','logo':'fa fa-space-shuttle'}
@@ -3537,3 +3537,35 @@ export const SPECIES_KEYS = [
   "Language",
   "Home world",
 ];
+export const FILMS_KEYS =[
+  "Title",
+  "EpisodeId",
+  "Opening crawl",
+  "Director",
+  "Producer",
+  "Release_date"
+]
+export const STARSHIPS_KEYS = [
+  "name",
+  "model",
+  "manufacturer",
+  "cost in credits",
+  "length",
+  "max atmosphering speed",
+  "crew",
+  "passengers",
+  "cargo capacity",
+  "consumables",
+  "hyperdrive rating",
+  "MGLT",
+  "Starship class"
+]
+export const NO_CHARACTERS_IN_FILM=[
+  {'Film':'A New Hope','Characters':20},
+  {'Film':'Attack Of The Clones','Characters':15},
+  {'Film':'The Phantom Menace','Characters':40},
+  {'Film':'Revenge Of The Sith','Characters':79},
+  {'Film':'Return Of The Jedi','Characters':67},
+  {'Film':'The Empire Strikes Back','Characters':36},
+  {'Film':'The Force Awakens','Characters':28},
+]

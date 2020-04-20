@@ -6,5 +6,6 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class DataPassService {
    dataPass$ = new BehaviorSubject(null);
+   searchDataPass$ = new BehaviorSubject(null);
   constructor() { }
 }

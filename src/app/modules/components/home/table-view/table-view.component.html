@@ -20,7 +20,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let list of displayList;let i= index">
+      <tr *ngFor="let list of displayList |searchHighlight:searchText;let i= index">
           <td *ngFor="let data of list.text;let j= index">
             <span>{{data}}</span>
           </td>
