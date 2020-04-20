@@ -25,14 +25,19 @@ export class HomeComponent implements OnInit {
   sideBarList = SIDE_BAR;
   selectedList: any;
   selectedName: string;
-  selectedView = 'table';
+  selectedView = "table";
 
   constructor(
     private route: ActivatedRoute,
     private dataService: DataPassService,
     private storageService: StorageService
   ) {
-
+    let selectedInfo = this.storageService.getItem("selectedInfo");
+    if (selectedInfo) {
+      console.log(selectedInfo);
+      this.getLink(selectedInfo);
+      this.dataService.dataPass$.next(selectedInfo)
+    }
   }
 
   ngOnInit(): void {}
@@ -58,13 +63,13 @@ export class HomeComponent implements OnInit {
     this.storageService.setItem("selectedInfo", data);
     this.dataService.dataPass$.next(data);
   }
-  viewChange(data){
-    if(data){
+  viewChange(data) {
+    if (data) {
       this.selectedView = data;
     }
   }
 
-  filterText(e){
+  filterText(e) {
     let filterData = e.target.value;
     console.log(filterData);
     this.dataService.searchDataPass$.next(filterData);

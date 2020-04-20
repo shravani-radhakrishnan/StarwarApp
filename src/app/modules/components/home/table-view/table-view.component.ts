@@ -34,14 +34,6 @@ export class TableViewComponent implements OnInit {
     private storageService: StorageService
   ) {
     console.log("call me");
-    if (
-      this.storageService.getItem("selectedInfo") !== null &&
-      this.storageService.getItem("selectedInfo") !== undefined
-    ) {
-      this.dataService.dataPass$.next(
-        this.storageService.getItem("selectedInfo")
-      );
-    }
     this.dataService.searchDataPass$.subscribe((data) => {
       if (data) {
         this.searchText = data;
